@@ -5,7 +5,7 @@ const router = express.Router();
 
 // /admin/add-product => GET
 router.get("/add-product", (req, res, next) => {
-  const file = path.join(__dirname, "../", "views", "add-product.html");
+  const file = path.join(__dirname, "..", "views", "add-product.html");
   res.sendFile(file);
 });
 

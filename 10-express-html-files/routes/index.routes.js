@@ -4,7 +4,7 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  const file = path.join(__dirname, "../", "views", "index.html");
+  const file = path.join(__dirname, "..", "views", "index.html");
   res.sendFile(file);
 });
 
