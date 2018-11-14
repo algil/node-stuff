@@ -1,8 +1,8 @@
 "use strict";
 
-const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
+const { getViewFile } = require("./util/path");
 
 const indexRoutes = require("./routes/index.routes");
 const adminRoutes = require("./routes/admin.routes");
@@ -15,8 +15,7 @@ app.use(indexRoutes);
 app.use("/admin", adminRoutes);
 
 app.use((req, res, next) => {
-  const file = path.join(__dirname, "views", "404.html");
-  res.status(404).sendFile(file);
+  res.status(404).sendFile(getViewFile("404"));
 });
 
 app.listen(3000, () => {

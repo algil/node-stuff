@@ -1,11 +1,10 @@
-const path = require("path");
 const express = require("express");
+const { getViewFile } = require("../util/path");
 
 const router = express.Router();
 
 router.get("/", (req, res, next) => {
-  const file = path.join(__dirname, "..", "views", "index.html");
-  res.sendFile(file);
+  res.sendFile(getViewFile("index"));
 });
 
 module.exports = router;
