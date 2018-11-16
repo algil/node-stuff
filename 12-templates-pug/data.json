@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "title": "Clean Architecture: A Craftsman's Guide to Software Structure and Design",
+      "author": "Robert C. Martin",
+      "price": "22.98 €",
+      "image": "https://books.google.com/books/content/images/frontcover/uGE1DwAAQBAJ?fife=w400-h600",
+      "description": "Practical Software Architecture Solutions from the Legendary Robert C. Martin (“Uncle Bob”). By applying universal rules of software architecture, you can dramatically improve developer productivity throughout the life of any software system. Now, building upon the success of his best-selling books Clean Code and The Clean Coder, legendary software craftsman Robert C. Martin (“Uncle Bob”) reveals those rules and helps you apply them."
+    },
+    {
+      "title": "Pro Git: Edition 2",
+      "author": "Scott Chacon, Ben Straub",
+      "price": "Free",
+      "image": "https://books.google.com/books/content/images/frontcover/jVYnCgAAQBAJ?fife=w400-h600",
+      "description": "Pro Git (Second Edition) is your fully-updated guide to Git and its usage in the modern world. Git has come a long way since it was first developed by Linus Torvalds for Linux kernel development. It has taken the open source world by storm since its inception in 2005, and this book teaches you how to use it like a pro."
+    }
+  ]
+}
