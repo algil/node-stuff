@@ -1,0 +1,31 @@
+<%- include('partials/head.start.ejs') %>
+
+<link rel="stylesheet" href="/css/product.css" />
+
+<%- include('partials/head.end.ejs') %>
+
+<%- include('partials/body.start.ejs') %>
+
+<h1>Welcome to my shop!</h1>
+<% if (products) { %>
+<div class="grid">
+  <% for (let product of products) { %>
+  <article class="card product-item">
+    <header class="card__header">
+      <h1 class="product__title"><%= product.title %></h1>
+    </header>
+    <div class="card__image">
+      <img src="<%= product.image %>" alt="Product" />
+    </div>
+    <div class="card__content">
+      <h2 class="product__price"><%= product.price %></h2>
+      <p class="product__description"><%= product.description %></p>
+    </div>
+    <div class="card__actions"><button class="btn">Add to Cart</button></div>
+  </article>
+  <% } %>
+</div>
+<% } else { %>
+<h2>No products</h2>
+
+<% } %> <%- include('partials/body.end.ejs') %>
