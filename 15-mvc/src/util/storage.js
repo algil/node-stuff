@@ -19,7 +19,8 @@ const fetchCollectionFromFile = async filename => {
 };
 
 const saveCollectionIntoFile = async (filename, collection) => {
-  writeFileAsync(filename, JSON.stringify(collection));
+  const file = getDataFile(filename);
+  writeFileAsync(file, JSON.stringify(collection));
 };
 
 module.exports = {
