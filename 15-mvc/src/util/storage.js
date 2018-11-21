@@ -2,13 +2,13 @@
 
 const fs = require('fs');
 const { promisify } = require('util');
-const { getDataFile } = require('../util/path');
+const { getFilePath } = require('../util/path');
 
 const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
 
 const fetchCollectionFromFile = async filename => {
-  const file = getDataFile(filename);
+  const file = getFilePath(filename);
   let collection = [];
 
   try {
@@ -19,7 +19,7 @@ const fetchCollectionFromFile = async filename => {
 };
 
 const saveCollectionIntoFile = async (filename, collection) => {
-  const file = getDataFile(filename);
+  const file = getFilePath(filename);
   writeFileAsync(file, JSON.stringify(collection));
 };
 

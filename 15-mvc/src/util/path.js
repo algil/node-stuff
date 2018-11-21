@@ -11,7 +11,7 @@ const getViewFile = htmlFileName => {
   return path.join(viewsDir, `${htmlFileName}.html`);
 };
 
-const getDataFile = filename => {
+const getFilePath = filename => {
   return path.join(dataDir, `${filename}.json`);
 };
 
@@ -20,5 +20,5 @@ module.exports = {
   viewsDir,
   publicDir,
   getViewFile,
-  getDataFile
+  getFilePath
 };
