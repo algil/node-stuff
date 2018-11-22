@@ -1,9 +1,6 @@
 'use strict';
 
-const {
-  fetchCollectionFromFile,
-  saveCollectionIntoFile
-} = require('../util/storage');
+const { fetchCollectionFromFile, saveIntoFile } = require('../util/storage');
 
 class Product {
   constructor(title) {
@@ -13,7 +10,7 @@ class Product {
   async save() {
     let products = await fetchCollectionFromFile('product');
     products.push(this);
-    await saveCollectionIntoFile('product', products);
+    await saveIntoFile('product', products);
   }
 
   static async fetchAll() {

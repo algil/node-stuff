@@ -18,12 +18,12 @@ const fetchCollectionFromFile = async filename => {
   return collection;
 };
 
-const saveCollectionIntoFile = async (filename, collection) => {
+const saveIntoFile = async (filename, collection) => {
   const file = getFilePath(filename);
   writeFileAsync(file, JSON.stringify(collection));
 };
 
 module.exports = {
   fetchCollectionFromFile,
-  saveCollectionIntoFile
+  saveIntoFile
 };
