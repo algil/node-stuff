@@ -7,15 +7,9 @@ const { getFilePath } = require('../util/path');
 const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
 
-const fetchCollectionFromFile = async filename => {
+const fetchFromFile = async filename => {
   const file = getFilePath(filename);
-  let collection = [];
-
-  try {
-    collection = JSON.parse(await readFileAsync(file));
-  } catch {}
-
-  return collection;
+  return JSON.parse(await readFileAsync(file));
 };
 
 const saveIntoFile = async (filename, collection) => {
@@ -24,6 +18,6 @@ const saveIntoFile = async (filename, collection) => {
 };
 
 module.exports = {
-  fetchCollectionFromFile,
+  fetchFromFile,
   saveIntoFile
 };
